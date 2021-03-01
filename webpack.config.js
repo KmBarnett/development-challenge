@@ -1,50 +1,51 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const Dotenv = require("dotenv-webpack");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
-
-const isProduction = process.env.IS_PRODUCTION
+const isProduction = process.env.IS_PRODUCTION;
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.jsx',
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: 'bundle.js',
+    publicPath: '/',
+    path: path.resolve(__dirname, 'dist'),
   },
-  mode: "development",
-  devtool: "inline-source-map",
+  mode: 'development',
+  devtool: 'inline-source-map',
   devServer: {
-    contentBase: "./dist",
+    contentBase: './dist',
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             cacheDirectory: true,
             cacheCompression: false,
-            envName: isProduction ? "production" : "development",
+            envName: isProduction ? 'production' : 'development',
           },
         },
       },
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "Development",
-      template: "./template.html",
+      title: 'Development',
+      template: './template.html',
+      publicPath: '/',
     }),
     new Dotenv(),
   ],

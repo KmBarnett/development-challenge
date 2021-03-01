@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "dev": "node_modules/.bin/webpack serve --open"
+    "dev": "node_modules/.bin/webpack serve --open",
+    "serve": "yarn build && http-server dist --cors -c-1"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,7 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.1.0",
     "html-webpack-plugin": "5.2.0",
+    "http-server": "^0.12.3",
     "path": "0.12.7",
     "prettier": "2.0.5",
     "prettier-eslint": "11.0.0",
