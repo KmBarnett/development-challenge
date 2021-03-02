@@ -15,6 +15,7 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
+    historyApiFallback: true,
     contentBase: './dist',
   },
   module: {
@@ -44,6 +45,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Development',
+      filename: 'index.html',
       template: './template.html',
       publicPath: '/',
     }),

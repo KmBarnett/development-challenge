@@ -1,26 +1,22 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import FHIR from 'fhirclient';
+import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-const App = () => {
-  const client = FHIR.client('https://r4.smarthealthit.org/');
-  const [patients, setPatient] = useState([]);
+// eslint-disable-next-line max-len
 
-  const getPatient = useCallback(async () => {
-    try {
-      const patientsList = await client.request('Patient');
-      setPatient(patientsList.entry);
-      console.log(patients);
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error(error);
-    }
-  });
+// Components
+import Launch from '../Launch';
+import Allergies from '../Allergies';
 
-  useEffect(() => {
-    getPatient();
-  }, []);
-
-  return <div> hello world</div>;
-};
+const App = () => (
+  <div>
+    <Switch>
+      <Route path="/launch" component={Launch} />
+      <Route path="/allergies" component={Allergies} />
+      <Route path="*">
+        <Redirect to="/launch?launch=eyJhIjoiMSJ9&iss=https%3A%2F%2Flaunch.smarthealthit.org%2Fv%2Fr4%2Ffhir" />
+      </Route>
+    </Switch>
+  </div>
+);
 
 export default App;
