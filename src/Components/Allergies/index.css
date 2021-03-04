@@ -1,0 +1,50 @@
+.paitent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.25rem;
+}
+
+.paitentDetails {
+  width: 80%;
+  min-width: 360px;
+  padding: .5rem;
+  border-bottom: solid 3px black;
+}
+
+.genderDOB {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.allergies {
+  margin-top: 2rem;
+  width: 100%;
+  list-style: none;
+  background: lightgrey;
+}
+
+.allergies li {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;  
+  justify-content: center;
+  padding: .25rem;
+}
+
+.allergies li:nth-child(2n + 1) {
+  background: white;
+}
+
+.allergyBlock {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  min-width: 360px;
+}
+
+.allergiesHeader {
+  background: white;
+  font-size: 1.5rem;
+}
