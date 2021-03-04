@@ -1,6 +1,6 @@
 # GigaTECH Development Challenge
 
-Hi! Thank you for your interest in [GigaTECH][gigatech]. Our hiring process may include a development challenge. This challenge allows us to gauge some of your basic software skill set. We will follow the challenge up with a technical interview to discuss what you have submitted.
+Hi! Thank you for your interest in [GigaTECH]. Our hiring process may include a development challenge. This challenge allows us to gauge some of your basic software skill set. We will follow the challenge up with a technical interview to discuss what you have submitted.
 
 We appreciate that any coding challenge represents an investment of your time. We hope you see the value in having a code sample that is relatable to both of us for the interview. You should feel free to use the code you developed for this challenge in any way that you would like.
 
@@ -14,8 +14,7 @@ Ideally, this would take a junior developer no more than 1 hour to complete.
 
 ## Minimum Requirements
 
-    Your browser based application must meet this minimum requirements.
-
+Your browser based application must meet this minimum requirements.
 - The application shall run on the following host/port, http://127.0.0.1:8080/, with the "npm run serve" command.
 - The application shall display the allergy information for the selected patient.
 - The application shall display an error message indicating allergies were not found if no allergies were found for the selected patient.
@@ -37,8 +36,8 @@ Ideally, this would take a junior developer no more than 1 hour to complete.
 
 - You will probably want to install npm
   - For MacOS, these links may help you (MacOS is not required to perform this challenge)
-    - [Homebrew][homebrew]
-    - [NVM][nvm]
+    - [Homebrew]
+    - [NVM]
     - [Nodejs][node]
 - This is a sample "npm run serve" script
   - "serve": "./node_modules/http-server/bin/http-server src -p $npm_package_config_port --cors",
@@ -59,14 +58,23 @@ The code written for this challenge will be used in the next step of the intervi
 
 Areas to potentially expand upon (this is not an exhaustive list)
 
-- add unit tests to your project
-- parse the json and display the output, versus just displaying the json
-- handle errors in a nice way for the user
-- Responsive presentation, determining the screen size and autoscaling the display
+[ ] add unit tests to your project
+[x] parse the json and display the output, versus just displaying the json
+[x] handle errors in a nice way for the user
+[x] Responsive presentation, determining the screen size and autoscaling the display
 
 ## License
 
 This project is [MIT Licensed](LICENSE).
+
+
+## Additional Information About Submital
+
+1. Dev server can be started with `yarn dev/ npm run dev`
+   1. Dev server cannot handle redirect from index/html
+2. Responsive
+3. Allergy entries alternate between gray and white
+4. Since not having Allergies is not an error I simply tell the user that the `Patient has no known allergies`
 
 ## References
 
@@ -75,7 +83,7 @@ The following references may be useful in this challenge.
 - [Github Markdown][ghmd]
 - [FHIR Specification][fhir]
 - [FHIR AllergyIntolerance][fhirallergy]
-- [fhirsearch][fhirsearch]
+- [fhirsearch]
 - [SMART Technical Reference][smarttech]
 - [SMART Tutorial for browser apps][smarttutorial]
 - [SMART R4 FHIR Server][smartr4fhirserver]
@@ -83,15 +91,15 @@ The following references may be useful in this challenge.
 - [Node Version Manager][nvm]
 - [nodejs][node]
 
-[gthr]: mailto:HR@giagatech.net?subject=[GigaTECH%20Development%20Challenge]%20Submittal "GigaTECH HR email submittal"
-[gigatech]: https://gigatech.net "GigaTECH Home"
-[ghmd]: https://guides.github.com/features/mastering-markdown/ "Github Markdown"
-[smarttech]: http://docs.smarthealthit.org/ "SMART technical reference"
-[smarttutorial]: http://docs.smarthealthit.org/tutorials/javascript/ "SMART browser application tutorial"
-[smartr4fhirserver]: https://r3.smarthealthit.org "SMART R4 FHIR Server"
-[fhir]: https://hl7.org/fhir "FHIR Specification"
-[fhirallergy]: https://www.hl7.org/fhir/allergyintolerance.html "FHIR AllergyIntolerance"
-[fhirsearch]: https://www.hl7.org/fhir/search.html "FHIR Search"
-[homebrew]: https://brew.sh/ "MacOS Homebrew"
-[nvm]: https://github.com/nvm-sh/nvm/blob/master/README.md "Node version manager"
-[node]: https://nodejs.org/en/ "Node JS"
+[gthr]: mailto:HR@giagatech.net?subject=[GigaTECH%20Development%20Challenge]%20Submittal
+[gigatech]: https://gigatech.net
+[ghmd]: https://guides.github.com/features/mastering-markdown/
+[smarttech]: http://docs.smarthealthit.org/
+[smarttutorial]: http://docs.smarthealthit.org/tutorials/javascript/
+[smartr4fhirserver]: https://r3.smarthealthit.org
+[fhir]: https://hl7.org/fhir
+[fhirallergy]: https://www.hl7.org/fhir/allergyintolerance.html
+[fhirsearch]: https://www.hl7.org/fhir/search.html
+[homebrew]: https://brew.sh/
+[nvm]: https://github.com/nvm-sh/nvm/blob/master/README.md
+[node]: https://nodejs.org/en/
